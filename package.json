@@ -8,7 +8,6 @@
   "name": "spaceapps-pasadena",
   "description": "Website for NASA SpaceApps in Pasadena",
   "version": "1.0.0",
-  "main": "app.js",
   "devDependencies": {
     "@babel/core": "^7.15.0",
     "@babel/preset-env": "^7.15.0",
@@ -26,7 +25,6 @@
     "webpack-dev-server": "^3.11.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
     "start": "webpack serve"
   },
@@ -35,9 +33,7 @@
     "url": "git+https://github.com/SheCodes-PCC/spaceapps-pasadena.git"
   },
   "author": "she-codes",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/SheCodes-PCC/spaceapps-pasadena/issues"
-  },
-  "homepage": "https://github.com/SheCodes-PCC/spaceapps-pasadena#readme"
+  }
 }

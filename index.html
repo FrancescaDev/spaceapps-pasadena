@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Meta Description for SEO -->
-    <meta name="description" content="Website for NASA Space Apps Pasadena">
-    <title>NASA Space Apps Pasadena 2021 Website</title>
 
+    <meta name="description" content="Website for NASA Space Apps Pasadena" />
+  
+    <title>NASA Space Apps Pasadena 2021 Website</title>
 
     <!-- Font -->
     <link
@@ -26,70 +27,61 @@
   </head>
 
   <body class="mdc-typography">
-    <!-- TODO: Add tabs -->
     <header
-      class="mdc-top-app-bar mdc-top-app-bar--prominent mdc-top-app-bar--fixed"
+      class="
+        mdc-top-app-bar
+        mdc-top-app-bar--short
+        mdc-top-app-bar--short-has-action-item
+      "
+      style="top: 0px"
     >
       <div class="mdc-top-app-bar__row">
         <section
           class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start"
         >
-          <button
+          <img
             class="
-              material-icons
               mdc-top-app-bar__navigation-icon
-              mdc-icon-button
+              mdc-ripple-upgraded--unbounded
+              mdc-ripple-upgraded
             "
-            aria-label="Open navigation menu"
+            src="./static/NASA-space-apps-2021-white-portion-logo.png"
+            alt="NASA Space Apps Pasadena 2021 Logo"
+            height="40"
+            width="40"
+          />
+
+          <span class="mdc-top-app-bar__title"
+            >NASA Space Apps Pasadena 2021</span
           >
-            menu
-          </button>
-          <a
-            class="brand"
-            aria-label="Navigate to the NASA space apps pasadena 2021 homepage."
-            href="/"
-            ><span
-              class="brand-logo"
-              style="
-                background: url('./media/NASA-space-apps-logo-white.png') 100%
-                  50% / auto 100% no-repeat;
-              "
-            ></span>
-            <span class="mdc-top-app-bar__title brand-title"
-              >NASA Space Apps Pasadena 2021</span
-            >
-          </a>
         </section>
         <section
           class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end"
-          role="toolbar"
-        ></section>
+        >
+          <ul class="navList">
+            <li class="navListItem">
+              <a class="navListLink mdc-typography--button" href="/">ABOUT</a>
+            </li>
+
+            <li class="navListItem">
+              <a class="navListLink mdc-typography--button" href="#">DISCORD</a>
+            </li>
+
+            <li class="navListItem">
+              <a
+                class="navListLink mdc-typography--button"
+                href="https://2021.spaceappschallenge.org/locations/pasadena-ca/"
+                target="_blank"
+                >REGISTER</a
+              >
+            </li>
+          </ul>
+        </section>
       </div>
     </header>
 
-    <main
-      class="mdc-top-app-bar--prominent-fixed-adjust mdc-top-app-bar--fixed"
-    >
-      <!-- Banner -->
-      <div class="mdc-banner" role="banner">
-        <div class="mdc-banner__content"
-             role="alertdialog"
-             aria-live="assertive">
-          <div class="mdc-banner__graphic-text-wrapper">
-            <div class="mdc-banner__text">
-              Hop onto our Discord(chat platform) to ask questions, find a team, and more!
-            </div>
-          </div>
-          <div class="mdc-banner__actions">
-            <a href="https://discord.gg/XTwnNFyNZv" target="_blank">
-              <div class="mdc-button__ripple"></div>
-              <div class="mdc-button__label">Join Our Discord</div>
-            </a>
-          </div>
-        </div>
-      </div>
-
-     <!-- Hero -->
+    <main class="contentMax">
+      <!-- Hero -->
       <section class="hero">
         <div class="hero-container">
           <div>
@@ -106,33 +98,39 @@
                   "
                 >
                   <div class="about-text">
-                    <h1 class="mdc-typography--headline3">
-                      Hackathon: Space Apps Pasadena registration is open
+                    <h1 class="mdc-typography--headline2">
+                      Space Apps Pasadena 2021 Hackathon
                     </h1>
+
                     <h2 class="mdc-typography--body1">
-                      Create teams and use NASA Data to find solutions to Space
-                      & Earth’s most pressing challenges at Space Apps Pasadena!
-                      Oct 2-3, @NASA is calling people from around the globe to
-                      join the 10th annual International #SpaceApps Challenge.
+                      NASA International Space Apps is an international
+                      hackathon for coders, scientists, designers, storytellers,
+                      makers, builders, technologists, and others in cities
+                      around the world. The world needs your ideas! Oct 2-3,
+                      @NASA is calling people from around the globe to join the
+                      10th annual International #SpaceApps Challenge. Create
+                      teams and use NASA Data to find solutions to Space &
+                      Earth’s most pressing challenges at Space Apps Pasadena!
                     </h2>
                     
 
                     <!-- TODO: Style button -->
                     <a
                       href="https://2021.spaceappschallenge.org/locations/pasadena-ca/"
+                      target="”_blank”"
                     >
-                      <button
-                        class="
-                          mdc-button mdc-button--raised
-                          accessible-button
-                          landing-page-register-button
-                        "
-                      >
-                        <span class="mdc-button__label">Register now</span>
-                      </button>
+                      <div class="mdc-touch-target-wrapper">
+                        <button class="mdc-button mdc-button--touch">
+                          <span class="mdc-button__ripple"></span>
+                          <span class="mdc-button__touch"></span>
+                          <span class="mdc-button__label">Register Now</span>
+                        </button>
+                      </div>
                     </a>
                   </div>
                 </div>
+
+                <!-- TODO: Add image Sizes -->
                 <div
                   class="
                     mdc-layout-grid__cell
@@ -159,12 +157,11 @@
                           ./media/space-apps-pasadena-2021-hero-image-1100-2x.jpg 2x
                         "
                       /> -->
+
                       <img
                         class="hero-image"
-                        src="./media/"
-                        srcset="
-                          ./media/space-apps-pasadena-2021-hero-image-1400-2x.png
-                        "
+                        src="./static/"
+                        srcset="./static/Space-Apps-2021.png"
                         alt=""
                       />
                     </picture>
@@ -175,21 +172,9 @@
           </div>
         </div>
       </section>
-
-      <!-- TODO: Fix responsive text -->
       <!-- Footer -->
-      <!-- Add footer elements -->
-      <section class="landing-page-section footer">
-        <div class="mdc-layout-grid">
-          <div class="footer-items">
-            <div class="footer-item footer-item-logo-2021"></div>
-            <a class="footer-item discord" href="https://discord.gg/XTwnNFyNZv" target="_blank">Discord</a>
-            <a class="footer-item faqs" href="#">FAQS</a>
-          </div>
-        </div>
-      </section>
-    </main>
 
+    </main>
     <!-- JavaScript -->
     <script src="./dist/bundle.js" async></script>
   </body>

@@ -1,50 +1,44 @@
-/* All Use components */
+// /* All Use components */
 // Color
-@use "@material/theme" with (
-  $primary: #07103F,
-  $secondary: #ee2c3e,
-  $on-primary: #fff,
-  $on-secondary: #000,
-  $on-error: #fff,
-  $on-surface: #000,
-  $background: #07103F,
-  $surface: #fff,
-  $error: #c22b10
+@use '@material/theme' with (
+  // Dark-ish theme
+  $primary: #07103f,
+  $secondary: white,
+  $surface: black,
+  $background: #07103f,
+  $on-surface: white,
+  $on-primary: white,
 );
-// button
-@use "@material/button/styles";
-// customize button
+// Must be configured before any other use/import that imports MDC styles
+@use '@material/button/styles';
+// Theme
+@use "@material/theme/custom-properties";
+// Customize button
 @use "@material/button";
-// top app bar
+// Top app bar
 @use "@material/icon-button";
 @use "@material/top-app-bar/mdc-top-app-bar";
-// grid
+// Grid
 @use "@material/layout-grid/mdc-layout-grid";
-// typography
-@use "@material/typography/mdc-typography";
-// customize banner
-@use "@material/banner";
+// Typography
+@use '@material/typography/mdc-typography';
+// Tabs
+@use "@material/tab-bar/mdc-tab-bar";
+@use "@material/tab-scroller/mdc-tab-scroller";
+@use "@material/tab-indicator/mdc-tab-indicator";
+@use "@material/tab/mdc-tab";
+// Drawer
+@use "@material/drawer";
+@use "@material/list";
+@use '@material/list/mdc-list';
 
 /* All include components */
-// top app bar
+// Top app bar
 @include icon-button.core-styles;
-
-/* Layout */
-// grid
-:root {
-  --mdc-layout-grid-margin-desktop-hd: 32px;
-  --mdc-layout-grid-gutter-desktop-hd: 32px;
-  --mdc-layout-grid-column-width-desktop-hd: 69px;
-  --mdc-layout-grid-margin-desktop: 32px;
-  --mdc-layout-grid-gutter-desktop: 32px;
-  --mdc-layout-grid-column-width-desktop: 51px;
-  --mdc-layout-grid-margin-tablet: 32px;
-  --mdc-layout-grid-gutter-tablet: 32px;
-  --mdc-layout-grid-column-width-tablet: 64px;
-  --mdc-layout-grid-margin-phone: 16px;
-  --mdc-layout-grid-gutter-phone: 16px;
-  --mdc-layout-grid-column-width-phone: 115px;
-}
+// Drawer
+@include drawer.core-styles;
+@include drawer.dismissible-core-styles;
+@include drawer.modal-core-styles;
 
 * {
   // Toggle Comment border stye & color (on/off) to see layout border.
@@ -68,86 +62,67 @@ html {
   padding: 0;
 }
 
-.brand {
+body {
+  margin: 0;
   display: flex;
-  align-items: center;
-  height: 72px;
-  margin-right: auto;
-  padding-left: 24px;
 }
 
-.brand-title {
-  display: none;
+main {
+  margin: 0 auto;
 }
 
-.mdc-banner {
-  display: grid;
-  grid-template-columns: 4fr 2fr;
-  grid-template-rows: 50px;
-  background-color: #07103f;
-  border-bottom: 1px solid #fff;
-  position: fixed;
-  height: 75px;
-  width: 100%; 
-}
-
-.mdc-banner__text {
-  font-size: 20px;
-  margin-top: 20px;
-  margin-left: 40%;
-  float: left;
-  color: #FAF9F6;
-}
-
-.mdc-banner__actions a {
-  position: absolute;
-  margin-top: 20px;
-  margin-left: 15px;
-  font-size: 20px;
-  color: #f5f4f2;
-  float: right;
-  text-decoration: underline;
-  text-decoration-color: lightgray;
-  text-underline-offset: 1px;
-}
-
-
-.brand-logo {
-  display: block;
-  width: 232.91px;
-  height: 93.33px;
-  margin-right: 16px;
-}
-
-
-
-.hero-container {
-  background-color: #07103f;
-  color: #fff;
+.main-content {
+  overflow: auto;
+  height: 100%;
+  margin: 0 10vw;
+  padding: 50px 32px 32px;
 }
 
 .hero-image {
   width: 100%;
   height: fit-content;
-  background-color: #07103f;
 }
 
-.about-text {
-  padding-top: 137px;
+/* Reset List Styles */
+.navList {
+  list-style: none;
+  height: 32px;
+  padding-left: 0;
 }
 
-.accessible-button {
-  @include button.filled-accessible(white);
+/* Style the list items side by side */
+.navListItem {
+  display: inline-block;
+  margin: 0 8px;
 }
 
-.footer {
-  background-color: #000;
-  color: #fff;
+/* Style Top App Bar */
+.mdc-top-app-bar {
+  border-bottom: 1px solid #ddd;
 }
 
-.footer-item {
-  color: #000;
-  margin-bottom: 1rem;
-  margin-right: 2.5rem;
-  font-size: 0.875em;
+/* Hide on mobile */
+.mdc-top-app-bar__title {
+  display: none;
+}
+
+.navListLink {
+  color: var(--mdc-theme-secondary);
+}
+
+.homeLink {
+  color: var(--mdc-theme-secondary);
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Override Collapse Width */
+.mdc-top-app-bar--short-collapsed.mdc-top-app-bar--short-has-action-item {
+  width: 310px;
+}
+
+@media (min-width: 600px) {
+  .mdc-top-app-bar__title {
+    display: block;
+  }
 }
