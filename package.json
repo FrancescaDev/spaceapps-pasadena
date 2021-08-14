@@ -7,6 +7,7 @@
   },
   "name": "spaceapps-pasadena",
   "description": "Website for NASA SpaceApps in Pasadena",
+  "license": "Apache-2.0",
   "version": "1.0.0",
   "devDependencies": {
     "@babel/core": "^7.15.0",
@@ -28,11 +29,7 @@
     "build": "webpack",
     "start": "webpack serve"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/SheCodes-PCC/spaceapps-pasadena.git"
-  },
-  "author": "she-codes",
+  "author": "She.Codes PCC",
   "bugs": {
     "url": "https://github.com/SheCodes-PCC/spaceapps-pasadena/issues"
   }

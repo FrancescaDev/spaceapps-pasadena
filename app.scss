@@ -1,5 +1,5 @@
-// /* All Use components */
-// Color
+/* All Use components */
+/* Color */
 @use '@material/theme' with (
   $primary: #07103f,
   $secondary: #2a5fd9,
@@ -11,33 +11,33 @@
 
  
 );
-// Must be configured before any other use/import that imports MDC styles
+/* Must be configured before any other use/import that imports MDC styles */
 @use '@material/button/styles';
-// Theme
+/* Theme */
 @use "@material/theme/custom-properties";
-// Customize button
+/* Customize button */
 @use "@material/button";
-// Top app bar
+/* Top app bar */
 @use "@material/icon-button";
 @use "@material/top-app-bar/mdc-top-app-bar";
-// Grid
+/* Grid */
 @use "@material/layout-grid/mdc-layout-grid";
-// Typography
+/* Typography */
 @use '@material/typography/mdc-typography';
-// Tabs
+/* Tabs */
 @use "@material/tab-bar/mdc-tab-bar";
 @use "@material/tab-scroller/mdc-tab-scroller";
 @use "@material/tab-indicator/mdc-tab-indicator";
 @use "@material/tab/mdc-tab";
-// Shape
+/* Shape */
 @use "@material/shape";
 
 /* All include components */
-// Top app bar
+/* Top app bar */
 @include icon-button.core-styles;
 
 * {
-  // Toggle Comment border stye & color (on/off) to see layout border.
+  /* Toggle Comment border-style & color (on/off) to see layout border */
   // border-style: solid;
   // border-color: #c22b10;
 
@@ -117,8 +117,8 @@ main {
 }
 
 .hero-image {
-  width: 100%;
-  height: fit-content;
+  max-width: 100%;
+  // height: fit-content;
 }
 
 /* Reset List Styles */
@@ -197,23 +197,23 @@ main {
 }
 
 .accordion:after {
+  /* Material Font expand_more:
+  https://fonts.google.com/icons?selected=Material%20Icons%3Aexpand_more%3A */
   content: '\e5cf';
   float: right;
   margin-left: 5px;
 }
 
 .active:after {
+  /* Material Font close:
+  https://fonts.google.com/icons?selected=Material%20Icons%3Aclose%3A*/
   content: '\e5cd';
-}
-
-#countDownTimer {
-  text-align: left;
-  margin-top: 0px;
 }
 
 #countDownTimeContent {
   text-align: center;
-  margin-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer-item {
@@ -223,9 +223,10 @@ main {
 }
 
 .footer-items {
+  display: table;
+  text-align: center;
   margin-left: auto;
   margin-right: auto;
-  width: 10em;
 }
 
 .footer-logo {

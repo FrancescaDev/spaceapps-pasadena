@@ -2455,7 +2455,18 @@ svg.mdc-button__icon {
   will-change: transform, opacity;
 }
 
+/* All Use components */
+/* Color */
+/* Must be configured before any other use/import that imports MDC styles */
+/* Theme */
+/* Customize button */
+/* Top app bar */
+/* Grid */
+/* Typography */
+/* Tabs */
+/* Shape */
 /* All include components */
+/* Top app bar */
 .mdc-icon-button {
   display: inline-block;
   position: relative;
@@ -2626,6 +2637,7 @@ svg.mdc-button__icon {
 }
 
 * {
+  /* Toggle Comment border-style & color (on/off) to see layout border */
   text-decoration: none;
   box-sizing: border-box;
 }
@@ -2724,10 +2736,7 @@ main {
 }
 
 .hero-image {
-  width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  max-width: 100%;
 }
 
 /* Reset List Styles */
@@ -2806,23 +2815,23 @@ main {
 }
 
 .accordion:after {
+  /* Material Font expand_more:
+  https://fonts.google.com/icons?selected=Material%20Icons%3Aexpand_more%3A */
   content: "";
   float: right;
   margin-left: 5px;
 }
 
 .active:after {
+  /* Material Font close:
+  https://fonts.google.com/icons?selected=Material%20Icons%3Aclose%3A*/
   content: "";
-}
-
-#countDownTimer {
-  text-align: left;
-  margin-top: 0px;
 }
 
 #countDownTimeContent {
   text-align: center;
-  margin-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer-item {
@@ -2832,9 +2841,10 @@ main {
 }
 
 .footer-items {
+  display: table;
+  text-align: center;
   margin-left: auto;
   margin-right: auto;
-  width: 10em;
 }
 
 .footer-logo {
