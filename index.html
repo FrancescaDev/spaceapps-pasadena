@@ -4,12 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      rel="stylesheet"
-    />
     <!-- Meta Description for SEO -->
-
     <meta name="description" content="Website for NASA Space Apps Pasadena" />
 
     <title>NASA Space Apps Pasadena 2021 Website</title>
@@ -19,19 +14,18 @@
       href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
       rel="stylesheet"
     />
-
     <!-- Material Icons -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
-
+    <!-- Font Awesome Social icons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
     <!-- Stylesheet -->
     <link rel="stylesheet" href="./dist/bundle.css" />
-    <!-- count down timer-->
-    <link rel="stylesheet" href="countDownTimer.css">
-    <!--accordion FAQS-->
-    <link rel="stylesheet" href="accordion.css">
   </head>
 
   <body class="mdc-typography">
@@ -183,76 +177,89 @@
             </div>
           </div>
         </div>
-        <p id="countDownTimeContent">Space Apps Pasadena: <span id="countDownTimer"></span></p>
-        <div>
-          <h1>FAQS</h1>
-          <h2>&#128269 Answer your questions.</h2>
-          <button class="accordion">&#128640 What is Space Apps?</button>
+      </section>
+
+      <!-- TODO: Style Counter -->
+      <!-- Counter -->
+      <section class="landing-page-section counter-section">
+        <div class="mdc-layout-grid counter">
+          <p class="mdc-typography--headline5" id="countDownTimeContent">
+            Space Apps Pasadena 2021: <span id="countDownTimer"></span>
+          </p>
+        </div>
+      </section>
+
+      <!-- Accordion -->
+      <section class="landing-page-section">
+        <div class="mdc-layout-grid">
+          <h2 class="mdc-typography--headline3">FAQS</h2>
+          <h3 class="mdc-typography--headline5">Answer your questions.</h3>
+          <button class="accordion">
+            <span class="mdc-typography--headline6"
+              >&#128640; What is Space Apps?</span
+            >
+          </button>
           <div class="panel">
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-              when an unknown printer took a galley of type and scrambled it to make a type
-              specimen book. It has survived not only five centuries, but also the leap
-              into electronic typesetting, remaining essentially unchanged. It was popularised
-              in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-              and more recently with desktop publishing software like Aldus PageMaker
-              including versions of Lorem Ipsum.
+            <p class="mdc-typography--body1">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book.
             </p>
           </div>
-          <button class="accordion">&#128578; Who should participants in Space Apps?</button>
+          <button class="accordion">
+            <span class="mdc-typography--headline6"
+              >&#128578; Who should participate in Space Apps?</span
+            >
+          </button>
           <div class="panel">
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-              when an unknown printer took a galley of type and scrambled it to make a type
-              specimen book. It has survived not only five centuries, but also the leap
-              into electronic typesetting, remaining essentially unchanged. It was popularised
-              in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-              and more recently with desktop publishing software like Aldus PageMaker
-              including versions of Lorem Ipsum.
+            <p class="mdc-typography--body1">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book.
             </p>
           </div>
-          <button class="accordion">&#128075; What is Space Apps Pasadena?</button>
+          <button class="accordion">
+            <span class="mdc-typography--headline6"
+              >&#128075; What is Space Apps Pasadena?</span
+            >
+          </button>
           <div class="panel">
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-              when an unknown printer took a galley of type and scrambled it to make a type
-              specimen book. It has survived not only five centuries, but also the leap
-              into electronic typesetting, remaining essentially unchanged. It was popularised
-              in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-              and more recently with desktop publishing software like Aldus PageMaker
-              including versions of Lorem Ipsum.
+            <p class="mdc-typography--body1">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book.
             </p>
           </div>
-          <button class="accordion">&#128223 How do I contact my local lead?</button>
+          <button class="accordion">
+            <span class="mdc-typography--headline6"
+              >&#128223; How do I contact my local lead?</span
+            >
+          </button>
           <div class="panel">
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-              when an unknown printer took a galley of type and scrambled it to make a type
-              specimen book. It has survived not only five centuries, but also the leap
-              into electronic typesetting, remaining essentially unchanged. It was popularised
-              in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-              and more recently with desktop publishing software like Aldus PageMaker
-              including versions of Lorem Ipsum.
+            <p class="mdc-typography--body1">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book.
             </p>
           </div>
-          <button class="accordion">&#128515 Will I have fun at Space Apps Pasadena?</button>
+          <button class="accordion">
+            <span class="mdc-typography--headline6"
+              >&#128515; Will I have fun at Space Apps Pasadena?</span
+            >
+          </button>
           <div class="panel">
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-              when an unknown printer took a galley of type and scrambled it to make a type
-              specimen book. It has survived not only five centuries, but also the leap
-              into electronic typesetting, remaining essentially unchanged. It was popularised
-              in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-              and more recently with desktop publishing software like Aldus PageMaker
-              including versions of Lorem Ipsum.
+            <p class="mdc-typography--body1">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book.
             </p>
           </div>
-        </div>        
+        </div>
       </section>
       <!-- Footer -->
       <section class="footer">
@@ -310,11 +317,11 @@
         </div>
       </section>
     </main>
-    <!-- JavaScript -->
+    <!-- Material JavaScript -->
     <script src="./dist/bundle.js" async></script>
-    <!--count down timer-->
+    <!--Count Down Timer JavaScript-->
     <script src="countDownTimer.js"></script>
-    <!--accordion FAQS-->
+    <!--Accordion FAQ Javascript-->
     <script src="accordion.js"></script>
   </body>
 </html>

@@ -2,10 +2,10 @@
 // Color
 @use '@material/theme' with (
   $primary: #07103f,
-  $secondary: red,
+  $secondary: white,
   $surface: #07103f,
-  $background: #07103f,
-  $on-surface: white,
+  $background: white,
+  $on-surface: black,
   $on-primary: white,
 );
 // Must be configured before any other use/import that imports MDC styles
@@ -61,11 +61,32 @@ main {
   margin: 0 auto;
 }
 
+/* Use material design color */
+.mdc-top-app-bar,
+.navListLink,
+.footer,
+.footer-item {
+  @include theme.property(background, primary);
+  @include theme.property(color, on-primary);
+}
+
+.accordion,
+.panel {
+  @include theme.property(background, background);
+  @include theme.property(color, on-surface);
+}
+
+/* */
 .landing-page-section {
   overflow: auto;
-  height: 100%;
+  // height: 100%;
   margin: 0 10vw;
   padding: 50px 32px 32px;
+}
+
+.counter-section,
+.landing-page-footer {
+  margin: 0 10vw;
 }
 
 .hero-image {
@@ -86,9 +107,10 @@ main {
   margin: 0 8px;
 }
 
-/* Style Top App Bar */
+// /* Style Top App Bar */
 .mdc-top-app-bar {
   border-bottom: 1px solid #ddd;
+  overflow: hidden;
 }
 
 /* Hide on mobile */
@@ -96,12 +118,7 @@ main {
   display: none;
 }
 
-.navListLink {
-  color: var(--mdc-theme-secondary);
-}
-
 .homeLink {
-  color: var(--mdc-theme-secondary);
   text-decoration: none;
   display: inline-block;
 }
@@ -117,18 +134,58 @@ main {
   }
 }
 
-/* Footer */
-.footer {
-  @include theme.property(background, surface);
-  @include theme.property(color, on-surface);
-  position: absolute;
-  bottom: 0;
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  cursor: pointer;
+  padding: 18px;
   width: 100%;
-  height: auto;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on 
+  (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.accordion:hover {
+  background-color: #fff;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  text-align: left;
+  // padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  border-bottom-style: solid;
+  border-color: #000;
+  border-width: 1px;
+}
+
+.accordion:after {
+  content: '\003E';
+  float: right;
+  margin-left: 5px;
+  transform: rotate(90deg);
+}
+
+.active:after {
+  content: '\00D7';
+}
+
+#countDownTimer {
+  text-align: left;
+  margin-top: 0px;
+}
+
+#countDownTimeContent {
+  text-align: center;
+  margin-top: 0px;
 }
 
 .footer-item {
-  color: #fff;
   display: inline-block;
   margin: 0 auto;
   padding: 0 8px;
@@ -136,8 +193,4 @@ main {
 
 .footer-items-social {
   float: right;
-}
-
-.landing-page-footer {
-  margin: 0 10vw;
 }
