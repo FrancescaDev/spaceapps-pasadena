@@ -17,12 +17,19 @@ Note: This assumes you have Node.js and npm installed locally.
 
 ```
 git clone https://github.com/SheCodes-PCC/spaceapps-pasadena.git
+```
+
+<br>
+
+### 2) Navigate to spaceapps-pasadena:
+
+```
 cd spaceapps-pasadena
 ```
 
 <br>
 
-### 2) Install material components:
+### 3) Install material components:
 
 https://material.io/components?platform=web
 
@@ -34,7 +41,7 @@ npm i material-components-web
 
 <br>
 
-### 3) Install project dependencies:
+### 4) Install project dependencies:
 
 You’ll need all of these Node dependencies:
 
@@ -56,12 +63,12 @@ You’ll need all of these Node dependencies:
 You can install these Node dependencies by running this command:
 
 ```
-npm install --save-dev && npm update
+npm install --save-dev webpack webpack-cli webpack-dev-server css-loader sass-loader sass extract-loader file-loader autoprefixer postcss-loader @babel/core babel-loader @babel/preset-env @material/ripple
 ```
 
 <br>
 
-### 4) Run spaceapps-pasadena:
+### 5) Run spaceapps-pasadena:
 
 Start the server. Run `npm start` and open http://localhost:8080.
 <br>
@@ -71,7 +78,7 @@ You should see the website.
 
 <br>
 
-### 5) View your updates:
+### 6) View Updates:
 
 Change any styling or JavaScript, and want to view updates?
 <br>
@@ -84,13 +91,13 @@ Refresh your browser page. You should see the updates.
 
 <br>
 
-### 6) When you've finished:
+### 7) When you've finished:
 
 Open the terminal that has your server running, and close the server with `ctrl + c`.
 
 <br>
 
-### 7) Ready to share your great work:
+### 8) Ready to share your great work:
 
 Run `npm run build` before commit to git.
 
@@ -101,8 +108,6 @@ Run `npm run build` before commit to git.
 ## Resources:
 
 Help with <a href="https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request" target="_blank">creating a pull request.</a>
-
-<a href="https://github.com/material-components/material-components-web/tree/master/packages" target="_blank"> Material Web Components Github</a>
 
 List of <a href="https://material.io/components?platform=web" target="_blank">Material Web Components</a>
 
