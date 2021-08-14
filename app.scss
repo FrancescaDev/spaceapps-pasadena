@@ -1,50 +1,35 @@
 /* All Use components */
 // Color
-@use "@material/theme" with (
-  $primary: #07103F,
-  $secondary: #ee2c3e,
-  $on-primary: #fff,
-  $on-secondary: #000,
-  $on-error: #fff,
-  $on-surface: #000,
-  $background: #07103F,
-  $surface: #fff,
-  $error: #c22b10
+@use '@material/theme' with (
+  $primary: #07103f,
+  $secondary: red,
+  $surface: #07103f,
+  $background: #07103f,
+  $on-surface: white,
+  $on-primary: white,
 );
-// button
-@use "@material/button/styles";
-// customize button
+// Must be configured before any other use/import that imports MDC styles
+@use '@material/button/styles';
+// Theme
+@use "@material/theme/custom-properties";
+// Customize button
 @use "@material/button";
-// top app bar
+// Top app bar
 @use "@material/icon-button";
 @use "@material/top-app-bar/mdc-top-app-bar";
-// grid
+// Grid
 @use "@material/layout-grid/mdc-layout-grid";
-// typography
-@use "@material/typography/mdc-typography";
-// customize banner
-@use "@material/banner";
+// Typography
+@use '@material/typography/mdc-typography';
+// Tabs
+@use "@material/tab-bar/mdc-tab-bar";
+@use "@material/tab-scroller/mdc-tab-scroller";
+@use "@material/tab-indicator/mdc-tab-indicator";
+@use "@material/tab/mdc-tab";
 
 /* All include components */
-// top app bar
+// Top app bar
 @include icon-button.core-styles;
-
-/* Layout */
-// grid
-:root {
-  --mdc-layout-grid-margin-desktop-hd: 32px;
-  --mdc-layout-grid-gutter-desktop-hd: 32px;
-  --mdc-layout-grid-column-width-desktop-hd: 69px;
-  --mdc-layout-grid-margin-desktop: 32px;
-  --mdc-layout-grid-gutter-desktop: 32px;
-  --mdc-layout-grid-column-width-desktop: 51px;
-  --mdc-layout-grid-margin-tablet: 32px;
-  --mdc-layout-grid-gutter-tablet: 32px;
-  --mdc-layout-grid-column-width-tablet: 64px;
-  --mdc-layout-grid-margin-phone: 16px;
-  --mdc-layout-grid-gutter-phone: 16px;
-  --mdc-layout-grid-column-width-phone: 115px;
-}
 
 * {
   // Toggle Comment border stye & color (on/off) to see layout border.
@@ -68,6 +53,127 @@ html {
   padding: 0;
 }
 
+body {
+  display: flex;
+}
+
+main {
+  margin: 0 auto;
+}
+
+.landing-page-section {
+  overflow: auto;
+  height: 100%;
+  margin: 0 10vw;
+  padding: 50px 32px 32px;
+}
+
+.hero-image {
+  width: 100%;
+  height: fit-content;
+}
+
+/* Reset List Styles */
+.navList {
+  list-style: none;
+  height: 32px;
+  padding-left: 0;
+}
+
+/* Style the list items side by side */
+.navListItem {
+  display: inline-block;
+  margin: 0 8px;
+}
+
+/* Style Top App Bar */
+.mdc-top-app-bar {
+  border-bottom: 1px solid #ddd;
+}
+
+/* Hide on mobile */
+.mdc-top-app-bar__title {
+  display: none;
+}
+
+.navListLink {
+  color: var(--mdc-theme-secondary);
+}
+
+.homeLink {
+  color: var(--mdc-theme-secondary);
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Override Collapse Width */
+.mdc-top-app-bar--short-collapsed.mdc-top-app-bar--short-has-action-item {
+  width: 330px;
+}
+
+@media (min-width: 600px) {
+  .mdc-top-app-bar__title {
+    display: block;
+  }
+}
+
+/* Footer */
+.footer {
+  @include theme.property(background, surface);
+  @include theme.property(color, on-surface);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+}
+
+.footer-item {
+  color: #fff;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0 8px;
+}
+
+.footer-items-social {
+  float: right;
+}
+
+.landing-page-footer {
+  margin: 0 10vw;
+}
+
+/* Social Colors */
+
+.fa-discord:hover {
+  color: #5865F2;
+  transition: ease-in 0.1s;
+}
+
+.fa-facebook:hover {
+  color: #1877f2;
+  transition: ease-in 0.1s;
+}
+
+.fa-twitter:hover {
+  color: #1da1f2;
+  transition: ease-in 0.1s;
+}
+
+.fa-instagram:hover {
+  background: linear-gradient(45deg, 
+                      #f09433 0%,
+                      #e6683c 25%,
+                      #dc2743 50%,
+                      #cc2366 75%,
+                      #bc1888 100%);
+  transition: ease-in 0.1s;
+  border-radius: 5px;
+}
+
+/*.landing-page-section-footer {
+  border: 1px dashed magenta;
+}
+
 .brand {
   display: flex;
   align-items: center;
@@ -78,9 +184,9 @@ html {
 
 .brand-title {
   display: none;
-}
+}*/
 
-.mdc-banner {
+/*.mdc-banner {
   display: grid;
   grid-template-columns: 4fr 2fr;
   grid-template-rows: 50px;
@@ -110,18 +216,14 @@ html {
   text-decoration-color: lightgray;
   text-underline-offset: 1px;
 }
-
-
-.brand-logo {
+*/
+/*.brand-logo {
   display: block;
   width: 232.91px;
   height: 93.33px;
   margin-right: 16px;
-}
-
-
-
-.hero-container {
+}*/
+/*.hero-container {
   background-color: #07103f;
   color: #fff;
 }
@@ -134,29 +236,20 @@ html {
 
 .about-text {
   padding-top: 137px;
-}
-
-.accessible-button {
+}*/
+/*.accessible-button {
   @include button.filled-accessible(white);
-}
-
-
-/* New Example*/
-
-
-
-
-
+}*/
 /* Old Example */
-.landing-page-section-footer{
-  /* border: 2px solid magenta; */
- /*  display: grid;
+/*.landing-page-section-footer{
+  border: 2px solid magenta; 
+  display: grid;
   grid-template-columns: 6fr 6fr;
-  grid-template-rows: 100px; */
+  grid-template-rows: 100px; 
   background-color: #000;
   height: fit-content;
   margin-bottom: 0px;
-}
+}*/
 
 /* .footer-nav-links {
   display: block;
@@ -170,14 +263,14 @@ html {
   font-size: 0.875em;
 } */
 
-.footer-items {
+/*.footer-items {
   border: 2px dashed red; 
   height: 100px;
   width: 200px 
 }  
 
 .footer-logo img{
-  /* border: 1px solid red; */
+  border: 1px solid red; 
   position: absolute;
   margin-top: 70px;
   margin-left: 50px;
@@ -187,11 +280,11 @@ html {
 
 .footer-about {
   border: 1px solid greenyellow;
-  /* position: absolute; */
-  /* width: min-content; */
+  position: absolute; 
+  width: min-content; 
   margin-left: 250px;
   margin-top: 100px;
-  /* position: absolute; */
+  position: absolute; 
   color: #FAF9F6;
   text-align: center; 
   font-size: 25px;
@@ -208,49 +301,16 @@ ul > li {
 .social-menu{
   border: 1px dotted limegreen; 
   font-size: 35px;
-  /*margin-bottom: 0px */
+  margin-bottom: 0px 
   margin-top: 50px; 
-  /* margin-right: 0px; */
+  margin-right: 0px; 
   margin-left: 50%; 
   padding-right: 50px;
   position: absolute;
   
   
-}
-
-/* Social Colors */
-
-.social-menu li a {
+}*/
+/*.social-menu li a {
   color: #E5E4E2;
   margin-left: 15px;
-}
-
-.fa-discord:hover {
-  color: #5865F2;
-  transition: ease-in 0.1s;
-}
-
-.fa-facebook:hover {
-  color: #1877f2;
-  transition: ease-in 0.1s;
-}
-
-.fa-twitter:hover {
-  color: #1da1f2;
-  transition: ease-in 0.1s;
-}
-
-.fa-instagram:hover {
-  background: linear-gradient(45deg, 
-                      #f09433 0%,
-                      #e6683c 25%,
-                      #dc2743 50%,
-                      #cc2366 75%,
-                      #bc1888 100%);
-  transition: ease-in 0.1s;
-  border-radius: 5px;
-}
-
-.landing-page-section-footer {
-  border: 1px dashed magenta;
-}
+}*/
