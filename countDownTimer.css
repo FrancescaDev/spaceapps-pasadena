@@ -1,0 +1,21 @@
+.root {
+  --countDownTimer-Font-Family: Arial, Helvetica, sans-serif;
+  --countDownTimer-Font-Size: 20px;
+}
+
+#countDownTimer {
+    text-align: left;
+    font-weight: bold;
+    /*font-family: var(--countDownTimer-Font-Family);
+    font-size: 20px; comment out to use material design*/
+    color: #000;
+    margin-top: 0px;
+  }
+
+  #countDownTimeContent {
+    text-align:center;
+    /*font-family: var(--countDownTimer-Font-Family);    
+    font-size: 30px;  comment out to use material design*/
+    color: #000;
+    margin-top: 0px;    
+  }
