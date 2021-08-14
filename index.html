@@ -57,12 +57,18 @@
             >NASA Space Apps Pasadena 2021</span
           >
         </section>
+
+        <!-- TODO: Active nav hover/active -->
         <section
           class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end"
         >
           <ul class="navList">
             <li class="navListItem">
-              <a class="navListLink mdc-typography--button" href="/">ABOUT</a>
+              <a
+                class="navListLink active-navListLink mdc-typography--button"
+                href="/"
+                >ABOUT</a
+              >
             </li>
 
             <li class="navListItem">
@@ -120,18 +126,21 @@
                       Earth’s most pressing challenges at Space Apps Pasadena!
                     </h2>
 
-                    <!-- TODO: Style button -->
                     <a
                       href="https://2021.spaceappschallenge.org/locations/pasadena-ca/"
                       target="”_blank”"
                     >
-                      <div class="mdc-touch-target-wrapper">
-                        <button class="mdc-button mdc-button--touch">
-                          <span class="mdc-button__ripple"></span>
-                          <span class="mdc-button__touch"></span>
-                          <span class="mdc-button__label">Register Now</span>
-                        </button>
-                      </div>
+                      <button
+                        class="mdc-button mdc-button--raised register-button"
+                      >
+                        <span class="mdc-button__ripple"></span>
+                        <i
+                          class="material-icons mdc-button__icon"
+                          aria-hidden="true"
+                          >how_to_reg</i
+                        >
+                        <span class="mdc-button__label">Register Now</span>
+                      </button>
                     </a>
                   </div>
                 </div>
@@ -179,22 +188,23 @@
         </div>
       </section>
 
-      <!-- TODO: Style Counter -->
       <!-- Counter -->
       <section class="landing-page-section counter-section">
         <div class="mdc-layout-grid counter">
           <p class="mdc-typography--headline5" id="countDownTimeContent">
-            Space Apps Pasadena 2021: <span id="countDownTimer"></span>
+            Space Apps Pasadena 2021:
+            <span class="counter-text" id="countDownTimer"></span>
           </p>
         </div>
       </section>
 
+      <!-- TODO Add Accordian Text -->
       <!-- Accordion -->
       <section class="landing-page-section">
         <div class="mdc-layout-grid">
-          <h2 class="mdc-typography--headline3">FAQS</h2>
-          <h3 class="mdc-typography--headline5">Answer your questions.</h3>
-          <button class="accordion">
+          <h2 class="mdc-typography--headline3">FAQ</h2>
+          <h3 class="mdc-typography--headline5">Answer your questions</h3>
+          <button class="accordion material-icons">
             <span class="mdc-typography--headline6"
               >&#128640; What is Space Apps?</span
             >
@@ -207,7 +217,7 @@
               type and scrambled it to make a type specimen book.
             </p>
           </div>
-          <button class="accordion">
+          <button class="accordion material-icons">
             <span class="mdc-typography--headline6"
               >&#128578; Who should participate in Space Apps?</span
             >
@@ -220,7 +230,7 @@
               type and scrambled it to make a type specimen book.
             </p>
           </div>
-          <button class="accordion">
+          <button class="accordion material-icons">
             <span class="mdc-typography--headline6"
               >&#128075; What is Space Apps Pasadena?</span
             >
@@ -233,7 +243,7 @@
               type and scrambled it to make a type specimen book.
             </p>
           </div>
-          <button class="accordion">
+          <button class="accordion material-icons">
             <span class="mdc-typography--headline6"
               >&#128223; How do I contact my local lead?</span
             >
@@ -246,7 +256,7 @@
               type and scrambled it to make a type specimen book.
             </p>
           </div>
-          <button class="accordion">
+          <button class="accordion material-icons">
             <span class="mdc-typography--headline6"
               >&#128515; Will I have fun at Space Apps Pasadena?</span
             >
@@ -259,8 +269,23 @@
               type and scrambled it to make a type specimen book.
             </p>
           </div>
+          <button class="accordion material-icons">
+            <span class="mdc-typography--headline6"
+              >&#128269; Have more questions?</span
+            >
+          </button>
+          <div class="panel">
+            <p class="mdc-typography--body1">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book.
+            </p>
+          </div>
         </div>
       </section>
+
+      <!-- TODO Edit About text -->
       <!-- Footer -->
       <section class="footer">
         <div class="mdc-layout-grid">
@@ -277,7 +302,7 @@
                 Space Apps Pasadena is a hackathon that...
               </span>
             </div>
-
+            <!-- TODO: ADD Social Links -->
             <!-- Social Icons -->
             <div
               class="
@@ -319,9 +344,5 @@
     </main>
     <!-- Material JavaScript -->
     <script src="./dist/bundle.js" async></script>
-    <!--Count Down Timer JavaScript-->
-    <script src="countDownTimer.js"></script>
-    <!--Accordion FAQ Javascript-->
-    <script src="accordion.js"></script>
   </body>
 </html>

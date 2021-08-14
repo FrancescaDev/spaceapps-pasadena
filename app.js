@@ -8,13 +8,12 @@ const topAppBar = new MDCTopAppBar(topAppBarElement);
 // Instantiation Material button
 const buttonRipple = new MDCRipple(document.querySelector('.mdc-button'));
 
+//
 // Countdown Timer
+//
 // implement css id="countDownTimer"
-// variables
 var DATE_STOP_COUNTDOWN = 'Oct 2, 2021 00:00:00'; // m d, yyyy hh:mm:ss
-
 var COUNT_DOWN_COMPLETE_MSG = 'EXPIRED';
-
 var DAY = 24,
   HOUR = 60,
   MINUTE = 60,
@@ -94,7 +93,9 @@ var countDown = setInterval(function () {
   }
 }, SECOND);
 
+//
 // Accordian
+//
 var acc = document.getElementsByClassName('accordion');
 var i;
 
