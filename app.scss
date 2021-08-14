@@ -8,6 +8,7 @@
   $on-surface: #000,
   $on-primary: #fff,
   $on-secondary: #fff,
+
  
 );
 // Must be configured before any other use/import that imports MDC styles
@@ -94,9 +95,14 @@ main {
   @include theme.property(color, secondary);
 }
 
-// Material Shape
+/* Material Shape */
 .register-button {
-  @include button.shape-radius(33%);
+  @include button.shape-radius(40%);
+}
+
+.accordion-panel-link {
+  text-decoration-line: underline;
+  @include theme.property(color, secondary);
 }
 
 .landing-page-section {
@@ -128,7 +134,7 @@ main {
   margin: 0 8px;
 }
 
-// /* Style Top App Bar */
+/* Style Top App Bar */
 .mdc-top-app-bar {
   border-bottom: 1px solid #ddd;
   overflow: hidden;
@@ -165,9 +171,6 @@ main {
   outline: none;
   transition: 0.4s;
 }
-
-/* Add a background color to the button if it is clicked on 
-  (.active class with JS), and when you move the mouse over it (hover) */
 
 /* Style the accordion panel. Note: hidden by default */
 .panel {

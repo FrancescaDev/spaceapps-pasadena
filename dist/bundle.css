@@ -2696,11 +2696,20 @@ main {
   color: var(--mdc-theme-secondary, #2a5fd9);
 }
 
+/* Material Shape */
 .register-button {
-  border-radius: 11.88px;
+  border-radius: 14.4px;
 }
 .register-button .mdc-button__ripple {
-  border-radius: 11.88px;
+  border-radius: 14.4px;
+}
+
+.accordion-panel-link {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: #2a5fd9;
+  /* @alternate */
+  color: var(--mdc-theme-secondary, #2a5fd9);
 }
 
 .landing-page-section {
@@ -2734,6 +2743,7 @@ main {
   margin: 0 8px;
 }
 
+/* Style Top App Bar */
 .mdc-top-app-bar {
   border-bottom: 1px solid #ddd;
   overflow: hidden;
@@ -2770,8 +2780,6 @@ main {
   transition: 0.4s;
 }
 
-/* Add a background color to the button if it is clicked on 
-  (.active class with JS), and when you move the mouse over it (hover) */
 /* Style the accordion panel. Note: hidden by default */
 .panel {
   text-align: left;
