@@ -2,7 +2,7 @@
 // Color
 @use '@material/theme' with (
   $primary: #07103f,
-  $secondary: white,
+  $secondary: red,
   $surface: #07103f,
   $background: #07103f,
   $on-surface: white,
@@ -26,18 +26,10 @@
 @use "@material/tab-scroller/mdc-tab-scroller";
 @use "@material/tab-indicator/mdc-tab-indicator";
 @use "@material/tab/mdc-tab";
-// Drawer
-@use "@material/drawer";
-@use "@material/list";
-@use '@material/list/mdc-list';
 
 /* All include components */
 // Top app bar
 @include icon-button.core-styles;
-// // Drawer
-// @include drawer.core-styles;
-// @include drawer.dismissible-core-styles;
-// @include drawer.modal-core-styles;
 
 * {
   // Toggle Comment border stye & color (on/off) to see layout border.
@@ -69,7 +61,7 @@ main {
   margin: 0 auto;
 }
 
-.main-content {
+.landing-page-section {
   overflow: auto;
   height: 100%;
   margin: 0 10vw;
@@ -116,11 +108,36 @@ main {
 
 /* Override Collapse Width */
 .mdc-top-app-bar--short-collapsed.mdc-top-app-bar--short-has-action-item {
-  width: 310px;
+  width: 330px;
 }
 
 @media (min-width: 600px) {
   .mdc-top-app-bar__title {
     display: block;
   }
+}
+
+/* Footer */
+.footer {
+  @include theme.property(background, surface);
+  @include theme.property(color, on-surface);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+}
+
+.footer-item {
+  color: #fff;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0 8px;
+}
+
+.footer-items-social {
+  float: right;
+}
+
+.landing-page-footer {
+  margin: 0 10vw;
 }
