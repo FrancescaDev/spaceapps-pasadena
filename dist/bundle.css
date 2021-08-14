@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .mdc-touch-target-wrapper {
   display: inline;
 }
@@ -320,7 +321,7 @@ svg.mdc-button__icon {
   color: var(--mdc-theme-primary, #07103f);
 }
 .mdc-button:disabled {
-  color: rgba(255, 255, 255, 0.38);
+  color: rgba(0, 0, 0, 0.38);
 }
 .mdc-button .mdc-button__icon {
   font-size: 1.125rem;
@@ -396,15 +397,15 @@ svg.mdc-button__icon {
   background-color: var(--mdc-theme-primary, #07103f);
 }
 .mdc-button--unelevated:disabled {
-  background-color: rgba(255, 255, 255, 0.12);
+  background-color: rgba(0, 0, 0, 0.12);
 }
 .mdc-button--unelevated:not(:disabled) {
-  color: white;
+  color: #fff;
   /* @alternate */
-  color: var(--mdc-theme-on-primary, white);
+  color: var(--mdc-theme-on-primary, #fff);
 }
 .mdc-button--unelevated:disabled {
-  color: rgba(255, 255, 255, 0.38);
+  color: rgba(0, 0, 0, 0.38);
 }
 .mdc-button--unelevated .mdc-button__icon {
   font-size: 1.125rem;
@@ -413,9 +414,9 @@ svg.mdc-button__icon {
 }
 .mdc-button--unelevated .mdc-button__ripple::before,
 .mdc-button--unelevated .mdc-button__ripple::after {
-  background-color: white;
+  background-color: #fff;
   /* @alternate */
-  background-color: var(--mdc-ripple-color, var(--mdc-theme-on-primary, white));
+  background-color: var(--mdc-ripple-color, var(--mdc-theme-on-primary, #fff));
 }
 .mdc-button--unelevated:hover .mdc-button__ripple::before, .mdc-button--unelevated.mdc-ripple-surface--hover .mdc-button__ripple::before {
   opacity: 0.08;
@@ -482,15 +483,15 @@ svg.mdc-button__icon {
   background-color: var(--mdc-theme-primary, #07103f);
 }
 .mdc-button--raised:disabled {
-  background-color: rgba(255, 255, 255, 0.12);
+  background-color: rgba(0, 0, 0, 0.12);
 }
 .mdc-button--raised:not(:disabled) {
-  color: white;
+  color: #fff;
   /* @alternate */
-  color: var(--mdc-theme-on-primary, white);
+  color: var(--mdc-theme-on-primary, #fff);
 }
 .mdc-button--raised:disabled {
-  color: rgba(255, 255, 255, 0.38);
+  color: rgba(0, 0, 0, 0.38);
 }
 .mdc-button--raised .mdc-button__icon {
   font-size: 1.125rem;
@@ -499,9 +500,9 @@ svg.mdc-button__icon {
 }
 .mdc-button--raised .mdc-button__ripple::before,
 .mdc-button--raised .mdc-button__ripple::after {
-  background-color: white;
+  background-color: #fff;
   /* @alternate */
-  background-color: var(--mdc-ripple-color, var(--mdc-theme-on-primary, white));
+  background-color: var(--mdc-ripple-color, var(--mdc-theme-on-primary, #fff));
 }
 .mdc-button--raised:hover .mdc-button__ripple::before, .mdc-button--raised.mdc-ripple-surface--hover .mdc-button__ripple::before {
   opacity: 0.08;
@@ -576,7 +577,7 @@ svg.mdc-button__icon {
   color: var(--mdc-theme-primary, #07103f);
 }
 .mdc-button--outlined:disabled {
-  color: rgba(255, 255, 255, 0.38);
+  color: rgba(0, 0, 0, 0.38);
 }
 .mdc-button--outlined .mdc-button__icon {
   font-size: 1.125rem;
@@ -618,10 +619,10 @@ svg.mdc-button__icon {
   border-radius: var(--mdc-shape-small, 4px);
 }
 .mdc-button--outlined:not(:disabled) {
-  border-color: rgba(255, 255, 255, 0.12);
+  border-color: rgba(0, 0, 0, 0.12);
 }
 .mdc-button--outlined:disabled {
-  border-color: rgba(255, 255, 255, 0.12);
+  border-color: rgba(0, 0, 0, 0.12);
 }
 .mdc-button--outlined.mdc-button--icon-trailing {
   padding: 0 11px 0 15px;
@@ -654,16 +655,16 @@ svg.mdc-button__icon {
 }
 .mdc-top-app-bar .mdc-top-app-bar__action-item,
 .mdc-top-app-bar .mdc-top-app-bar__navigation-icon {
-  color: white;
+  color: #fff;
   /* @alternate */
-  color: var(--mdc-theme-on-primary, white);
+  color: var(--mdc-theme-on-primary, #fff);
 }
 .mdc-top-app-bar .mdc-top-app-bar__action-item::before, .mdc-top-app-bar .mdc-top-app-bar__action-item::after,
 .mdc-top-app-bar .mdc-top-app-bar__navigation-icon::before,
 .mdc-top-app-bar .mdc-top-app-bar__navigation-icon::after {
-  background-color: white;
+  background-color: #fff;
   /* @alternate */
-  background-color: var(--mdc-ripple-color, var(--mdc-theme-on-primary, white));
+  background-color: var(--mdc-ripple-color, var(--mdc-theme-on-primary, #fff));
 }
 .mdc-top-app-bar .mdc-top-app-bar__action-item:hover::before, .mdc-top-app-bar .mdc-top-app-bar__action-item.mdc-ripple-surface--hover::before,
 .mdc-top-app-bar .mdc-top-app-bar__navigation-icon:hover::before,
@@ -2153,9 +2154,9 @@ svg.mdc-button__icon {
   border-color: var(--mdc-theme-primary, #07103f);
 }
 .mdc-tab-indicator .mdc-tab-indicator__content--icon {
-  color: white;
+  color: #2a5fd9;
   /* @alternate */
-  color: var(--mdc-theme-secondary, white);
+  color: var(--mdc-theme-secondary, #2a5fd9);
 }
 .mdc-tab-indicator .mdc-tab-indicator__content--underline {
   border-top-width: 2px;
@@ -2242,10 +2243,10 @@ svg.mdc-button__icon {
   position: relative;
 }
 .mdc-tab .mdc-tab__text-label {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(0, 0, 0, 0.6);
 }
 .mdc-tab .mdc-tab__icon {
-  color: rgba(255, 255, 255, 0.54);
+  color: rgba(0, 0, 0, 0.54);
   fill: currentColor;
 }
 
@@ -2454,7 +2455,18 @@ svg.mdc-button__icon {
   will-change: transform, opacity;
 }
 
+/* All Use components */
+/* Color */
+/* Must be configured before any other use/import that imports MDC styles */
+/* Theme */
+/* Customize button */
+/* Top app bar */
+/* Grid */
+/* Typography */
+/* Tabs */
+/* Shape */
 /* All include components */
+/* Top app bar */
 .mdc-icon-button {
   display: inline-block;
   position: relative;
@@ -2592,32 +2604,32 @@ svg.mdc-button__icon {
   height: var(--mdc-ripple-fg-size, 100%);
 }
 .mdc-icon-button .mdc-icon-button__ripple::before, .mdc-icon-button .mdc-icon-button__ripple::after {
-  background-color: white;
+  background-color: #000;
   /* @alternate */
-  background-color: var(--mdc-ripple-color, white);
+  background-color: var(--mdc-ripple-color, #000);
 }
 .mdc-icon-button:hover .mdc-icon-button__ripple::before, .mdc-icon-button.mdc-ripple-surface--hover .mdc-icon-button__ripple::before {
-  opacity: 0.08;
+  opacity: 0.04;
   /* @alternate */
-  opacity: var(--mdc-ripple-hover-opacity, 0.08);
+  opacity: var(--mdc-ripple-hover-opacity, 0.04);
 }
 .mdc-icon-button.mdc-ripple-upgraded--background-focused .mdc-icon-button__ripple::before, .mdc-icon-button:not(.mdc-ripple-upgraded):focus .mdc-icon-button__ripple::before {
   transition-duration: 75ms;
-  opacity: 0.24;
+  opacity: 0.12;
   /* @alternate */
-  opacity: var(--mdc-ripple-focus-opacity, 0.24);
+  opacity: var(--mdc-ripple-focus-opacity, 0.12);
 }
 .mdc-icon-button:not(.mdc-ripple-upgraded) .mdc-icon-button__ripple::after {
   transition: opacity 150ms linear;
 }
 .mdc-icon-button:not(.mdc-ripple-upgraded):active .mdc-icon-button__ripple::after {
   transition-duration: 75ms;
-  opacity: 0.24;
+  opacity: 0.12;
   /* @alternate */
-  opacity: var(--mdc-ripple-press-opacity, 0.24);
+  opacity: var(--mdc-ripple-press-opacity, 0.12);
 }
 .mdc-icon-button.mdc-ripple-upgraded {
-  --mdc-ripple-fg-opacity: var(--mdc-ripple-press-opacity, 0.24);
+  --mdc-ripple-fg-opacity: var(--mdc-ripple-press-opacity, 0.12);
 }
 .mdc-icon-button .mdc-icon-button__ripple {
   pointer-events: none;
@@ -2625,6 +2637,7 @@ svg.mdc-button__icon {
 }
 
 * {
+  /* Toggle Comment border-style & color (on/off) to see layout border */
   text-decoration: none;
   box-sizing: border-box;
 }
@@ -2650,6 +2663,7 @@ main {
   margin: 0 auto;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 .mdc-banner__actions a {
@@ -2678,20 +2692,84 @@ main {
 =======
 .main-content {
 =======
+=======
+/* Use material design color */
+.mdc-top-app-bar,
+.navListLink,
+.footer,
+.footer-item {
+  background: #07103f;
+  /* @alternate */
+  background: var(--mdc-theme-primary, #07103f);
+  color: #fff;
+  /* @alternate */
+  color: var(--mdc-theme-on-primary, #fff);
+}
+
+.accordion,
+.panel {
+  background: #fff;
+  /* @alternate */
+  background: var(--mdc-theme-surface, #fff);
+  color: #000;
+  /* @alternate */
+  color: var(--mdc-theme-on-surface, #000);
+}
+
+.counter-text {
+  color: #2a5fd9;
+  /* @alternate */
+  color: var(--mdc-theme-secondary, #2a5fd9);
+}
+
+.mdc-button--raised:not(:disabled) {
+  background: #2a5fd9;
+  /* @alternate */
+  background: var(--mdc-theme-secondary, #2a5fd9);
+  color: #fff;
+  /* @alternate */
+  color: var(--mdc-theme-on-secondary, #fff);
+}
+
+.active,
+.accordion:hover {
+  color: #2a5fd9;
+  /* @alternate */
+  color: var(--mdc-theme-secondary, #2a5fd9);
+}
+
+/* Material Shape */
+.register-button {
+  border-radius: 14.4px;
+}
+.register-button .mdc-button__ripple {
+  border-radius: 14.4px;
+}
+
+.accordion-panel-link {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: #2a5fd9;
+  /* @alternate */
+  color: var(--mdc-theme-secondary, #2a5fd9);
+}
+
+>>>>>>> 2b1881b0c1fd1a234a480f8c81afad873cccd606
 .landing-page-section {
 >>>>>>> fc9dbcbe1b01097713876095177290ced9c3b9e9
   overflow: auto;
-  height: 100%;
   margin: 0 10vw;
   padding: 50px 32px 32px;
 >>>>>>> 762d601209923c8953224c1bbbd8763775454bf6
 }
 
+.counter-section,
+.landing-page-footer {
+  margin: 0 10vw;
+}
+
 .hero-image {
-  width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  max-width: 100%;
 }
 
 /* Reset List Styles */
@@ -2710,6 +2788,7 @@ main {
 /* Style Top App Bar */
 .mdc-top-app-bar {
   border-bottom: 1px solid #ddd;
+  overflow: hidden;
 }
 
 /* Hide on mobile */
@@ -2717,12 +2796,7 @@ main {
   display: none;
 }
 
-.navListLink {
-  color: var(--mdc-theme-secondary);
-}
-
 .homeLink {
-  color: var(--mdc-theme-secondary);
   text-decoration: none;
   display: inline-block;
 }
@@ -2737,52 +2811,80 @@ main {
     display: block;
   }
 }
-/* Footer */
-.footer {
-  background: #07103f;
-  /* @alternate */
-  background: var(--mdc-theme-surface, #07103f);
-  color: white;
-  /* @alternate */
-  color: var(--mdc-theme-on-surface, white);
-  position: absolute;
-  bottom: 0;
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  cursor: pointer;
+  padding: 18px;
   width: 100%;
-  height: auto;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  text-align: left;
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  border-bottom-style: solid;
+  border-color: #000;
+  border-width: 1px;
+}
+
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+}
+
+.accordion:after {
+  /* Material Font expand_more:
+  https://fonts.google.com/icons?selected=Material%20Icons%3Aexpand_more%3A */
+  content: "";
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  /* Material Font close:
+  https://fonts.google.com/icons?selected=Material%20Icons%3Aclose%3A*/
+  content: "";
+}
+
+#countDownTimeContent {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer-item {
-  color: #fff;
   display: inline-block;
   margin: 0 auto;
   padding: 0 8px;
 }
 
-.footer-items-social {
-  float: right;
+.footer-items {
+  display: table;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.landing-page-footer {
-  margin: 0 10vw;
-}
-
-.fa-discord:hover {
-  color: #5865f2;
-  transition: ease-in 0.1s;
-}
-
-.fa-facebook:hover {
-  color: #1877f2;
-  transition: ease-in 0.1s;
-}
-
-.fa-twitter:hover {
-  color: #1da1f2;
-  transition: ease-in 0.1s;
-}
-
-.fa-instagram:hover {
-  background: linear-gradient(#f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-  border-radius: 5px;
-  transition: ease-in 0.1s;
+.footer-logo {
+  height: auto;
+  width: 8em;
+  /* correct proportions to specified height */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

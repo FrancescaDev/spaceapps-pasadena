@@ -1,38 +1,43 @@
-// /* All Use components */
-// Color
+/* All Use components */
+/* Color */
 @use '@material/theme' with (
   $primary: #07103f,
-  $secondary: red,
-  $surface: #07103f,
-  $background: #07103f,
-  $on-surface: white,
-  $on-primary: white,
+  $secondary: #2a5fd9,
+  $surface: #fff,
+  $background: #fff,
+  $on-surface: #000,
+  $on-primary: #fff,
+  $on-secondary: #fff,
+
+ 
 );
-// Must be configured before any other use/import that imports MDC styles
+/* Must be configured before any other use/import that imports MDC styles */
 @use '@material/button/styles';
-// Theme
+/* Theme */
 @use "@material/theme/custom-properties";
-// Customize button
+/* Customize button */
 @use "@material/button";
-// Top app bar
+/* Top app bar */
 @use "@material/icon-button";
 @use "@material/top-app-bar/mdc-top-app-bar";
-// Grid
+/* Grid */
 @use "@material/layout-grid/mdc-layout-grid";
-// Typography
+/* Typography */
 @use '@material/typography/mdc-typography';
-// Tabs
+/* Tabs */
 @use "@material/tab-bar/mdc-tab-bar";
 @use "@material/tab-scroller/mdc-tab-scroller";
 @use "@material/tab-indicator/mdc-tab-indicator";
 @use "@material/tab/mdc-tab";
+/* Shape */
+@use "@material/shape";
 
 /* All include components */
-// Top app bar
+/* Top app bar */
 @include icon-button.core-styles;
 
 * {
-  // Toggle Comment border stye & color (on/off) to see layout border.
+  /* Toggle Comment border-style & color (on/off) to see layout border */
   // border-style: solid;
   // border-color: #c22b10;
 
@@ -61,16 +66,59 @@ main {
   margin: 0 auto;
 }
 
+/* Use material design color */
+.mdc-top-app-bar,
+.navListLink,
+.footer,
+.footer-item {
+  @include theme.property(background, primary);
+  @include theme.property(color, on-primary);
+}
+
+.accordion,
+.panel {
+  @include theme.property(background, surface);
+  @include theme.property(color, on-surface);
+}
+
+.counter-text {
+  @include theme.property(color, secondary);
+}
+
+.mdc-button--raised:not(:disabled) {
+  @include theme.property(background, secondary);
+  @include theme.property(color, on-secondary);
+}
+
+.active,
+.accordion:hover {
+  @include theme.property(color, secondary);
+}
+
+/* Material Shape */
+.register-button {
+  @include button.shape-radius(40%);
+}
+
+.accordion-panel-link {
+  text-decoration-line: underline;
+  @include theme.property(color, secondary);
+}
+
 .landing-page-section {
   overflow: auto;
-  height: 100%;
   margin: 0 10vw;
   padding: 50px 32px 32px;
 }
 
+.counter-section,
+.landing-page-footer {
+  margin: 0 10vw;
+}
+
 .hero-image {
-  width: 100%;
-  height: fit-content;
+  max-width: 100%;
+  // height: fit-content;
 }
 
 /* Reset List Styles */
@@ -89,6 +137,7 @@ main {
 /* Style Top App Bar */
 .mdc-top-app-bar {
   border-bottom: 1px solid #ddd;
+  overflow: hidden;
 }
 
 /* Hide on mobile */
@@ -96,12 +145,7 @@ main {
   display: none;
 }
 
-.navListLink {
-  color: var(--mdc-theme-secondary);
-}
-
 .homeLink {
-  color: var(--mdc-theme-secondary);
   text-decoration: none;
   display: inline-block;
 }
@@ -117,27 +161,78 @@ main {
   }
 }
 
-/* Footer */
-.footer {
-  @include theme.property(background, surface);
-  @include theme.property(color, on-surface);
-  position: absolute;
-  bottom: 0;
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  cursor: pointer;
+  padding: 18px;
   width: 100%;
-  height: auto;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  text-align: left;
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  border-bottom-style: solid;
+  border-color: #000;
+  border-width: 1px;
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+}
+
+.accordion:after {
+  /* Material Font expand_more:
+  https://fonts.google.com/icons?selected=Material%20Icons%3Aexpand_more%3A */
+  content: '\e5cf';
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  /* Material Font close:
+  https://fonts.google.com/icons?selected=Material%20Icons%3Aclose%3A*/
+  content: '\e5cd';
+}
+
+#countDownTimeContent {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer-item {
-  color: #fff;
   display: inline-block;
   margin: 0 auto;
   padding: 0 8px;
 }
 
-.footer-items-social {
-  float: right;
+.footer-items {
+  display: table;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.landing-page-footer {
-  margin: 0 10vw;
+.footer-logo {
+  height: auto;
+  width: 8em; /* correct proportions to specified height */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

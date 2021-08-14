@@ -1,16 +1,14 @@
+<!-- TODO Responsive layout + test on phone -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      rel="stylesheet"
-    />
-    <!-- Meta Description for SEO -->
-
+    <!-- Meta description for SEO -->
     <meta name="description" content="Website for NASA Space Apps Pasadena" />
+    <!-- Meta for unicode -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
     <title>NASA Space Apps Pasadena 2021 Website</title>
 
@@ -19,19 +17,18 @@
       href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
       rel="stylesheet"
     />
-
     <!-- Material Icons -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
-
+    <!-- Font Awesome Social icons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
     <!-- Stylesheet -->
     <link rel="stylesheet" href="./dist/bundle.css" />
-    <!-- count down timer-->
-    <link rel="stylesheet" href="countDownTimer.css">
-    <!--accordion FAQS-->
-    <link rel="stylesheet" href="accordion.css">
   </head>
 
   <body class="mdc-typography">
@@ -47,6 +44,7 @@
         <section
           class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start"
         >
+          <!-- TODO: Convert logo image size -->
           <img
             class="
               mdc-top-app-bar__navigation-icon
@@ -63,12 +61,18 @@
             >NASA Space Apps Pasadena 2021</span
           >
         </section>
+
+        <!-- TODO: Active nav hover/active -->
         <section
           class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end"
         >
           <ul class="navList">
             <li class="navListItem">
-              <a class="navListLink mdc-typography--button" href="/">ABOUT</a>
+              <a
+                class="navListLink active-navListLink mdc-typography--button"
+                href="/"
+                >ABOUT</a
+              >
             </li>
 
             <li class="navListItem">
@@ -126,23 +130,25 @@
                       Earth’s most pressing challenges at Space Apps Pasadena!
                     </h2>
 
-                    <!-- TODO: Style button -->
                     <a
                       href="https://2021.spaceappschallenge.org/locations/pasadena-ca/"
                       target="”_blank”"
                     >
-                      <div class="mdc-touch-target-wrapper">
-                        <button class="mdc-button mdc-button--touch">
-                          <span class="mdc-button__ripple"></span>
-                          <span class="mdc-button__touch"></span>
-                          <span class="mdc-button__label">Register Now</span>
-                        </button>
-                      </div>
+                      <button
+                        class="mdc-button mdc-button--raised register-button"
+                      >
+                        <span class="mdc-button__ripple"></span>
+                        <i
+                          class="material-icons mdc-button__icon"
+                          aria-hidden="true"
+                          >how_to_reg</i
+                        >
+                        <span class="mdc-button__label">Register Now</span>
+                      </button>
                     </a>
                   </div>
                 </div>
 
-                <!-- TODO: Add image Sizes -->
                 <div
                   class="
                     mdc-layout-grid__cell
@@ -154,144 +160,180 @@
                   "
                 >
                   <div>
-                    <picture>
-                      <!-- <source
-                        media="(min-width: 1100px)"
-                        srcset="
-                          ./media/space-apps-pasadena-2021-hero-image-1400.jpg,
-                          ./media/space-apps-pasadena-2021-hero-image-1400-2x.jpg 2x
-                        "
-                      />
-                      <source
-                        media="(min-width: 768px)"
-                        srcset="
-                          ./media/space-apps-pasadena-2021-hero-image-1100.jpg,
-                          ./media/space-apps-pasadena-2021-hero-image-1100-2x.jpg 2x
-                        "
-                      /> -->
-
-                      <img
-                        class="hero-image"
-                        src="./static/"
-                        srcset="./static/Space-Apps-2021.png"
-                        alt=""
-                      />
-                    </picture>
+                    <!-- Responsive image more info:
+                    https://developers.google.com/web/fundamentals/design-and-ux/responsive/images
+                    -->
+                    <img
+                      class="hero-image"
+                      src="./static/nasa-space-apps-2021-edit-hero-image-200.jpg"
+                      sizes="50vw"
+                      srcset="
+                        ./static/nasa-space-apps-2021-edit-hero-image-100.webp   100w,
+                        ./static/nasa-space-apps-2021-edit-hero-image-200.webp   200w,
+                        ./static/nasa-space-apps-2021-edit-hero-image-400.webp   400w,
+                        ./static/nasa-space-apps-2021-edit-hero-image-800.webp   800w,
+                        ./static/nasa-space-apps-2021-edit-hero-image-1000.webp 1000w,
+                        ./static/nasa-space-apps-2021-edit-hero-image-1400.webp 1400w,
+                        ./static/nasa-space-apps-2021-edit-hero-image-1800.webp 1800w
+                      "
+                      alt="a NASA satellite orbiting the earth"
+                    />
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <p id="countDownTimeContent">Space Apps Pasadena: <span id="countDownTimer"></span></p>
-        <div>
-          <h1>FAQS</h1>
-          <h2>&#128269 Answer your questions.</h2>
-          <button class="accordion">&#128640 What is Space Apps?</button>
-          <div class="panel">
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-              when an unknown printer took a galley of type and scrambled it to make a type
-              specimen book. It has survived not only five centuries, but also the leap
-              into electronic typesetting, remaining essentially unchanged. It was popularised
-              in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-              and more recently with desktop publishing software like Aldus PageMaker
-              including versions of Lorem Ipsum.
-            </p>
-          </div>
-          <button class="accordion">&#128578; Who should participants in Space Apps?</button>
-          <div class="panel">
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-              when an unknown printer took a galley of type and scrambled it to make a type
-              specimen book. It has survived not only five centuries, but also the leap
-              into electronic typesetting, remaining essentially unchanged. It was popularised
-              in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-              and more recently with desktop publishing software like Aldus PageMaker
-              including versions of Lorem Ipsum.
-            </p>
-          </div>
-          <button class="accordion">&#128075; What is Space Apps Pasadena?</button>
-          <div class="panel">
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-              when an unknown printer took a galley of type and scrambled it to make a type
-              specimen book. It has survived not only five centuries, but also the leap
-              into electronic typesetting, remaining essentially unchanged. It was popularised
-              in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-              and more recently with desktop publishing software like Aldus PageMaker
-              including versions of Lorem Ipsum.
-            </p>
-          </div>
-          <button class="accordion">&#128223 How do I contact my local lead?</button>
-          <div class="panel">
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-              when an unknown printer took a galley of type and scrambled it to make a type
-              specimen book. It has survived not only five centuries, but also the leap
-              into electronic typesetting, remaining essentially unchanged. It was popularised
-              in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-              and more recently with desktop publishing software like Aldus PageMaker
-              including versions of Lorem Ipsum.
-            </p>
-          </div>
-          <button class="accordion">&#128515 Will I have fun at Space Apps Pasadena?</button>
-          <div class="panel">
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-              when an unknown printer took a galley of type and scrambled it to make a type
-              specimen book. It has survived not only five centuries, but also the leap
-              into electronic typesetting, remaining essentially unchanged. It was popularised
-              in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-              and more recently with desktop publishing software like Aldus PageMaker
-              including versions of Lorem Ipsum.
-            </p>
-          </div>
-        </div>        
       </section>
+
+      <!-- Counter -->
+      <section class="landing-page-section counter-section">
+        <div class="mdc-layout-grid counter">
+          <p class="mdc-typography--headline5" id="countDownTimeContent">
+            Space Apps Pasadena 2021:
+            <span class="counter-text" id="countDownTimer"></span>
+          </p>
+        </div>
+      </section>
+
+      <!-- Accordion -->
+      <!-- Keep pasted emojis: it's easy to read and maintain <3 -->
+      <section class="landing-page-section">
+        <div class="mdc-layout-grid">
+          <h2 class="mdc-typography--headline3">FAQ</h2>
+          <h3 class="mdc-typography--headline5">Answer your questions</h3>
+          <button class="accordion material-icons">
+            <span class="mdc-typography--headline6"
+              >🚀 What is Space Apps?</span
+            >
+          </button>
+          <div class="panel">
+            <p class="mdc-typography--body1">
+              The NASA International Space Apps Challenge (Space Apps) is an
+              international hackathon for coders, scientists, designers,
+              storytellers, makers, builders, technologists, and others in
+              cities around the world, where teams engage the National
+              Aeronautics and Space Administration’s (NASA’s) free and open data
+              to address real-world problems on Earth and in space.
+              <br />
+              <br />
+              For one weekend each October, participants from around the world
+              come together over a 48-hour period to solve challenges submitted
+              by NASA personnel. After the hackathon, project submissions are
+              judged by space agency experts and winners are selected for one of
+              10 Global Awards. Space Apps introduces problem-solvers worldwide
+              to NASA’s free and open data.
+            </p>
+          </div>
+          <button class="accordion material-icons">
+            <span class="mdc-typography--headline6"
+              >🙂 Who should participate in Space Apps?</span
+            >
+          </button>
+          <div class="panel">
+            <p class="mdc-typography--body1">
+              The common thread among Space Apps participants is that you are
+              interested in space science and exploration, that you are
+              creative, and that you want to solve problems. As a part of Space
+              Apps, you are part of a global hackathon community that embraces
+              collaboration across borders, sectors, and cultures to bring about
+              paradigm-shifting innovation.
+            </p>
+          </div>
+          <button class="accordion material-icons">
+            <span class="mdc-typography--headline6"
+              >👋 What is Space Apps Pasadena?</span
+            >
+          </button>
+          <div class="panel">
+            <p class="mdc-typography--body1">
+              Space Apps Pasadena is a location of the NASA Space Apps 2021
+              hackathon. If you're local to Pasadena, CA this is the place to
+              register for the hackathon. :) See you there.
+            </p>
+          </div>
+          <button class="accordion material-icons">
+            <span class="mdc-typography--headline6"
+              >✅ Do I need to register?</span
+            >
+          </button>
+          <div class="panel">
+            <p class="mdc-typography--body1">
+              Yes, please note that you must be registered for one of the
+              locations to participate in Space Apps. Do this as soon as
+              possible to connect with your Local Lead and other participants.
+              <br />
+              <br />
+              Once you’re registered for a location, connect with your Local
+              Lead(s) to ask questions and find potential teammates.
+            </p>
+          </div>
+          <button class="accordion material-icons">
+            <span class="mdc-typography--headline6"
+              >📟 How do I contact my local lead?</span
+            >
+          </button>
+          <div class="panel">
+            <p class="mdc-typography--body1">
+              She.Codes PCC is your local lead. We are a student club at
+              Pasadena City College. You can get in touch with us on our discord
+              <a
+                class="accordion-panel-link"
+                href="https://discord.gg/XTwnNFyNZv"
+                target="_blank"
+                >here</a
+              >. Feel free to ask any questions and we'll also provide updates
+              leading up to the hackathon on Oct 2-3rd. We look forward to
+              working with you.
+            </p>
+          </div>
+          <button class="accordion material-icons">
+            <span class="mdc-typography--headline6"
+              >😃 Will I have fun at Space Apps Pasadena?</span
+            >
+          </button>
+          <div class="panel">
+            <p class="mdc-typography--body1">That's our goal. <3</p>
+          </div>
+          <button class="accordion material-icons">
+            <span class="mdc-typography--headline6"
+              >🔍 Do you want more answers?</span
+            >
+          </button>
+          <div class="panel">
+            <p class="mdc-typography--body1">
+              Do you have any questions? There are some great resources
+              <a
+                class="accordion-panel-link"
+                href="https://discord.gg/XTwnNFyNZv"
+                target="_blank"
+                >here</a
+              >. And, feel free to ask your local lead questions on our discord
+              channel
+              <a
+                class="accordion-panel-link"
+                href="https://www.spaceappschallenge.org/resources/faq/"
+                target="_blank"
+                >here</a
+              >.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <!-- Footer -->
       <section class="footer">
         <div class="mdc-layout-grid">
           <div class="mdc-layout-grid__inner landing-page-footer">
-            <!-- About Text -->
-            <div
-              class="
-                mdc-layout-grid__cell
-                mdc-layout-grid__cell--span-6-desktop
-                mdc-layout-grid__cell--span-6-desktop-hd
-              "
-            >
-              <span class="footer-about mdc-typography--body2">
-                Space Apps Pasadena is a hackathon that...
-              </span>
-            </div>
-
             <!-- Social Icons -->
             <div
               class="
                 mdc-layout-grid__cell
-                mdc-layout-grid__cell--span-6-desktop
-                mdc-layout-grid__cell--span-6-desktop-hd
+                mdc-layout-grid__cell--span-12-desktop
+                mdc-layout-grid__cell--span-12-desktop-hd
               "
             >
-              <div class="footer-items-social social-menu">
-                <a
-                  class="footer-item mdc-typography--body2"
-                  href="https://discord.gg/XTwnNFyNZv"
-                  target="_blank"
-                  ><i class="fab fa-discord fa-2x"></i
-                ></a>
-                <a
-                  class="footer-item mdc-typography--body2"
-                  href="#"
-                  target="_blank"
-                  ><i class="fab fa-facebook fa-2x"></i>
-                </a>
+              <div class="footer-items social-menu">
                 <a
                   class="footer-item mdc-typography--body2"
                   href="https://twitter.com/SpaceAppsPCC"
@@ -300,21 +342,47 @@
                 </a>
                 <a
                   class="footer-item mdc-typography--body2"
-                  href="https://www.instagram.com/spaceapps.pasadena"
+<<<<<<< HEAD
+                  href="https://twitter.com/SpaceAppsPCC"
+=======
+                  href="https://www.instagram.com/spaceapps.pasadena/?hl=en"
+>>>>>>> 2b1881b0c1fd1a234a480f8c81afad873cccd606
                   target="_blank"
                   ><i class="fab fa-instagram fa-2x"></i
                 ></a>
+                <a
+                  class="footer-item mdc-typography--body2"
+<<<<<<< HEAD
+                  href="https://www.instagram.com/spaceapps.pasadena"
+=======
+                  href="https://discord.gg/XTwnNFyNZv"
+>>>>>>> 2b1881b0c1fd1a234a480f8c81afad873cccd606
+                  target="_blank"
+                  ><i class="fab fa-discord fa-2x"></i
+                ></a>
               </div>
+            </div>
+
+            <!-- TODO: Convert logo image size -->
+            <!-- Space Apps Pasadena Logo -->
+            <div
+              class="
+                mdc-layout-grid__cell
+                mdc-layout-grid__cell--span-12-desktop
+                mdc-layout-grid__cell--span-12-desktop-hd
+              "
+            >
+              <a href="#"
+                ><img
+                  class="footer-logo"
+                  src="./static/NASA-space-apps-pasadena-2021-white.png"
+              /></a>
             </div>
           </div>
         </div>
       </section>
     </main>
-    <!-- JavaScript -->
+    <!-- Material JavaScript -->
     <script src="./dist/bundle.js" async></script>
-    <!--count down timer-->
-    <script src="countDownTimer.js"></script>
-    <!--accordion FAQS-->
-    <script src="accordion.js"></script>
   </body>
 </html>
