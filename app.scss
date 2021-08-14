@@ -2,11 +2,13 @@
 // Color
 @use '@material/theme' with (
   $primary: #07103f,
-  $secondary: white,
-  $surface: #07103f,
-  $background: white,
-  $on-surface: black,
-  $on-primary: white,
+  $secondary: #2a5fd9,
+  $surface: #fff,
+  $background: #fff,
+  $on-surface: #000,
+  $on-primary: #fff,
+  $on-secondary: #fff,
+ 
 );
 // Must be configured before any other use/import that imports MDC styles
 @use '@material/button/styles';
@@ -26,6 +28,8 @@
 @use "@material/tab-scroller/mdc-tab-scroller";
 @use "@material/tab-indicator/mdc-tab-indicator";
 @use "@material/tab/mdc-tab";
+// Shape
+@use "@material/shape";
 
 /* All include components */
 // Top app bar
@@ -72,14 +76,31 @@ main {
 
 .accordion,
 .panel {
-  @include theme.property(background, background);
+  @include theme.property(background, surface);
   @include theme.property(color, on-surface);
 }
 
-/* */
+.counter-text {
+  @include theme.property(color, secondary);
+}
+
+.mdc-button--raised:not(:disabled) {
+  @include theme.property(background, secondary);
+  @include theme.property(color, on-secondary);
+}
+
+.active,
+.accordion:hover {
+  @include theme.property(color, secondary);
+}
+
+// Material Shape
+.register-button {
+  @include button.shape-radius(33%);
+}
+
 .landing-page-section {
   overflow: auto;
-  // height: 100%;
   margin: 0 10vw;
   padding: 50px 32px 32px;
 }
@@ -146,16 +167,12 @@ main {
 }
 
 /* Add a background color to the button if it is clicked on 
-  (add the .active class with JS), and when you move the mouse over it (hover) */
-.active,
-.accordion:hover {
-  background-color: #fff;
-}
+  (.active class with JS), and when you move the mouse over it (hover) */
 
 /* Style the accordion panel. Note: hidden by default */
 .panel {
   text-align: left;
-  // padding: 0 18px;
+  padding: 0 18px;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-out;
@@ -164,15 +181,26 @@ main {
   border-width: 1px;
 }
 
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+}
+
 .accordion:after {
-  content: '\003E';
+  content: '\e5cf';
   float: right;
   margin-left: 5px;
-  transform: rotate(90deg);
 }
 
 .active:after {
-  content: '\00D7';
+  content: '\e5cd';
 }
 
 #countDownTimer {
